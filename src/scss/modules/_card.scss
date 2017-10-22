@@ -1,0 +1,24 @@
+.card {
+    background-color: $white;
+    padding: 4em 8em;
+    border-radius: 20px;
+    text-align: center;
+    .main-logo {
+        max-width: 150px;
+    }
+    .title {
+        font-size: 70px;
+        font-weight: 500;
+        margin: auto;
+    }
+    .description {
+        font-size: 30px;
+        max-width: 780px;
+        margin: 1em auto;
+    }
+    .date {
+        font-size: 20px;
+        color: $primary-color;
+        margin: 1em auto;
+    }
+}

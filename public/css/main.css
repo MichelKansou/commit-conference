@@ -1,0 +1,245 @@
+/* Color Palletes */
+/* Base Styles */
+/* line 2, ../scss/base/_default.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 8, ../scss/base/_default.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../scss/base/_default.scss */
+html {
+  font-size: 100%;
+  font-family: 'SF-Pro';
+  font-weight: normal;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 20, ../scss/base/_default.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+
+/* line 24, ../scss/base/_default.scss */
+span {
+  font-size: 14px;
+  font-family: 'SF-Pro';
+  font-weight: normal;
+}
+
+/* line 29, ../scss/base/_default.scss */
+a {
+  opacity: 1;
+  text-decoration: none;
+}
+/* line 32, ../scss/base/_default.scss */
+a:hover {
+  opacity: 0.85;
+  text-decoration: underline;
+}
+
+/* line 38, ../scss/base/_default.scss */
+.content {
+  text-align: center;
+  margin-top: 2em;
+}
+
+/* line 43, ../scss/base/_default.scss */
+.white {
+  color: #F8F6F6 !important;
+}
+
+@font-face {
+  font-family: 'batmanFont';
+  src: url("./fonts/batman.ttf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/SF-Pro-Text-Light.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: url("./fonts/SF-Pro-Text-LightItalic.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/SF-Pro-Text-Regular.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/SF-Pro-Text-RegularItalic.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/SF-Pro-Text-Medium.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: italic;
+  font-weight: 500;
+  src: url("./fonts/SF-Pro-Text-MediumItalic.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/SF-Pro-Text-Semibold.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/SF-Pro-Text-SemiboldItalic.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/SF-Pro-Text-Bold.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: url("./fonts/SF-Pro-Text-BoldItalic.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/SF-Pro-Text-Heavy.otf");
+}
+@font-face {
+  font-family: 'SF-Pro';
+  font-style: italic;
+  font-weight: 800;
+  src: url("./fonts/SF-Pro-Text-HeavyItalic.otf");
+}
+/* line 1, ../scss/layouts/_main.scss */
+main#app {
+  height: 100%;
+}
+/* line 3, ../scss/layouts/_main.scss */
+main#app .container {
+  height: 100%;
+}
+
+/* line 1, ../scss/layouts/_home.scss */
+#home {
+  height: 100%;
+}
+/* line 3, ../scss/layouts/_home.scss */
+#home .container {
+  background: linear-gradient(to right bottom, #5362ce, #1b2766);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1300px) {
+  /* line 15, ../scss/layouts/_home.scss */
+  #home .container .card {
+    padding: 4em;
+    width: inherit;
+    margin: 0 15px;
+  }
+  /* line 19, ../scss/layouts/_home.scss */
+  #home .container .card .main-logo {
+    max-width: 120px;
+  }
+  /* line 22, ../scss/layouts/_home.scss */
+  #home .container .card .title {
+    font-size: 50px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  /* line 35, ../scss/layouts/_home.scss */
+  #home .container .card {
+    padding: 2em;
+  }
+  /* line 37, ../scss/layouts/_home.scss */
+  #home .container .card .main-logo {
+    max-width: 70px;
+  }
+  /* line 40, ../scss/layouts/_home.scss */
+  #home .container .card .title {
+    font-size: 30px;
+    max-width: 100%;
+  }
+  /* line 44, ../scss/layouts/_home.scss */
+  #home .container .card .description {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  /* line 48, ../scss/layouts/_home.scss */
+  #home .container .card .date {
+    font-size: 15px;
+  }
+  /* line 51, ../scss/layouts/_home.scss */
+  #home .container .card .btn {
+    padding: .5em 1em;
+  }
+}
+/* line 1, ../scss/modules/_card.scss */
+.card {
+  background-color: #F8F6F6;
+  padding: 4em 8em;
+  border-radius: 20px;
+  text-align: center;
+}
+/* line 6, ../scss/modules/_card.scss */
+.card .main-logo {
+  max-width: 150px;
+}
+/* line 9, ../scss/modules/_card.scss */
+.card .title {
+  font-size: 70px;
+  font-weight: 500;
+  margin: auto;
+}
+/* line 14, ../scss/modules/_card.scss */
+.card .description {
+  font-size: 30px;
+  max-width: 780px;
+  margin: 1em auto;
+}
+/* line 19, ../scss/modules/_card.scss */
+.card .date {
+  font-size: 20px;
+  color: #9244E7;
+  margin: 1em auto;
+}
+
+/* line 1, ../scss/modules/_button.scss */
+.btn {
+  background-color: #9244E7;
+  color: #F8F6F6;
+  padding: .5em 2em;
+  font-size: 25px;
+  border: 0;
+  border-radius: 10px;
+}
+/* line 8, ../scss/modules/_button.scss */
+.btn:hover {
+  cursor: pointer;
+  background-color: #BA82F8;
+}
+
+/*# sourceMappingURL=main.css.map */

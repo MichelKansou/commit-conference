@@ -1,0 +1,109 @@
+#plan {
+    padding: 100px 150px;
+    .container {
+        .title {
+            font-weight: 600;
+            font-size: 40px;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 3px solid $gray;
+            margin-bottom: 40px;
+        }
+        .date {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .grid {
+            margin-top: 2em;
+            .row {
+                display: flex;
+                margin-bottom: 2em;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                .column {
+                    width: 100%;
+                    .container {
+                        max-width: 480px;
+                        .subject-logo {
+                            width: 120px;
+                            height: 120px;
+                            border-radius: 50%;
+                            background-color: cornflowerblue;
+                            float: left;
+                            margin-right: 2em;
+                        }
+                        .subject-title {
+                            font-size: 25px;
+                        }
+                        .subject-description {
+                            font-size: 12px;
+                            color: $gray;
+                            margin: 1em 0;
+                        }
+                        .subject-date {
+                            float: right;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+@media only screen and (max-width : 1300px) {
+    #plan {
+        padding: 100px 50px;
+        .container {
+            .grid {
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 1060px) {
+    #plan {
+        .container {
+            .grid {
+                .row {
+                    flex-direction: column;
+                    .column {
+                        &:first-child{
+                            margin-bottom: 2em;
+                        }
+                        .container {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 560px) {
+    #plan {
+        padding: 100px 30px;
+        .container {
+            .grid {
+                .row {
+                    .column {
+                        .container {
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            .subject-logo {
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

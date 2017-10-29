@@ -1,0 +1,33 @@
+footer {
+    display: flex;
+    #contact {
+        width: 65%;
+        padding: 100px 150px;
+        .container {
+            .title {
+                font-weight: 600;
+                font-size: 40px;
+                display: inline-block;
+                padding-bottom: 10px;
+                border-bottom: 3px solid $gray;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .more-info {
+        width: 35%;
+        padding: 100px 50px;
+        background-color: #E7E7E7;
+        color: $gray;
+        .social-media {
+            font-size: 25px;
+            i {
+                margin-right: .5em;
+            }
+            &:hover {
+                color: $primary-color;
+                cursor: pointer;
+            }
+        }
+    }
+}

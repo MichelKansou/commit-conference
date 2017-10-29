@@ -1,34 +1,63 @@
-.contact-form {
-    .row {
-        display: flex;
-        .column {
-            width: 100%;
-            &:first-child {
-                margin-right: 2em;
+.form-container {
+    form {
+        .row {
+            display: flex;
+            .column {
+                width: 100%;
+                &:first-child {
+                    margin-right: 2em;
+                }
+            }
+        }
+        .field {
+            margin-bottom: 2em;
+            .header {
+                font-weight: 500;
+                font-size: 20px;
+            }
+            input {
+                border: 0;
+                border-bottom: 2px solid $gray;
+                font-size: 20px;
+                width: 100%;
+                padding: 1em 0;
+            }
+            textarea {
+                border: 0;
+                border-bottom: 2px solid $gray;
+                font-size: 20px;
+                width: 100%;
+                padding: 1em 0 0 0;
+                font-family: "SF-Pro";
+                font-weight: 400;
             }
         }
     }
-    .field {
-        margin-bottom: 2em;
-        .header {
-            font-weight: 500;
-            font-size: 20px;
-        }
-        input {
-            border: 0;
-            border-bottom: 2px solid $gray;
-            font-size: 20px;
+    .btn {
+        margin-top: 1em;
+        padding: .5em 4em;
+    }
+}
+
+@media only screen and (max-width : 780px) {
+    .form-container {
+        .btn {
             width: 100%;
-            padding: 1em 0;
+            padding: .5em 0em;
         }
-        textarea {
-            border: 0;
-            border-bottom: 2px solid $gray;
-            font-size: 20px;
-            width: 100%;
-            padding: 1em 0 0 0;
-            font-family: "SF-Pro";
-            font-weight: 400;
+    }
+}
+
+@media only screen and (max-width : 485px) {
+    .form-container {
+        form {
+            .row {
+                flex-direction: column;
+                .column {
+                    width: 100%;
+                    margin-right: 0;
+                }
+            }
         }
     }
 }

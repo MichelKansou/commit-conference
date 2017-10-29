@@ -405,6 +405,39 @@ footer .more-info .social-media:hover {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 1050px) {
+  /* line 37, ../../src/scss/layouts/_footer.scss */
+  footer #contact {
+    padding: 100px 50px;
+  }
+  /* line 40, ../../src/scss/layouts/_footer.scss */
+  footer .more-info {
+    padding: 100px 30px;
+  }
+  /* line 42, ../../src/scss/layouts/_footer.scss */
+  footer .more-info .social-media {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  /* line 50, ../../src/scss/layouts/_footer.scss */
+  footer {
+    flex-direction: column;
+  }
+  /* line 52, ../../src/scss/layouts/_footer.scss */
+  footer #contact {
+    width: 100%;
+  }
+  /* line 55, ../../src/scss/layouts/_footer.scss */
+  footer .more-info {
+    width: 100%;
+    padding: 20px 30px;
+  }
+  /* line 58, ../../src/scss/layouts/_footer.scss */
+  footer .more-info .social-media {
+    font-size: 20px;
+  }
+}
 /* line 1, ../../src/scss/modules/_card.scss */
 .card {
   background-color: #F8F6F6;
@@ -450,37 +483,37 @@ footer .more-info .social-media:hover {
   background-color: #BA82F8;
 }
 
-/* line 2, ../../src/scss/modules/_form.scss */
-.contact-form .row {
+/* line 3, ../../src/scss/modules/_form.scss */
+.form-container form .row {
   display: flex;
 }
-/* line 4, ../../src/scss/modules/_form.scss */
-.contact-form .row .column {
+/* line 5, ../../src/scss/modules/_form.scss */
+.form-container form .row .column {
   width: 100%;
 }
-/* line 6, ../../src/scss/modules/_form.scss */
-.contact-form .row .column:first-child {
+/* line 7, ../../src/scss/modules/_form.scss */
+.form-container form .row .column:first-child {
   margin-right: 2em;
 }
-/* line 11, ../../src/scss/modules/_form.scss */
-.contact-form .field {
+/* line 12, ../../src/scss/modules/_form.scss */
+.form-container form .field {
   margin-bottom: 2em;
 }
-/* line 13, ../../src/scss/modules/_form.scss */
-.contact-form .field .header {
+/* line 14, ../../src/scss/modules/_form.scss */
+.form-container form .field .header {
   font-weight: 500;
   font-size: 20px;
 }
-/* line 17, ../../src/scss/modules/_form.scss */
-.contact-form .field input {
+/* line 18, ../../src/scss/modules/_form.scss */
+.form-container form .field input {
   border: 0;
   border-bottom: 2px solid #979797;
   font-size: 20px;
   width: 100%;
   padding: 1em 0;
 }
-/* line 24, ../../src/scss/modules/_form.scss */
-.contact-form .field textarea {
+/* line 25, ../../src/scss/modules/_form.scss */
+.form-container form .field textarea {
   border: 0;
   border-bottom: 2px solid #979797;
   font-size: 20px;
@@ -488,6 +521,30 @@ footer .more-info .social-media:hover {
   padding: 1em 0 0 0;
   font-family: "SF-Pro";
   font-weight: 400;
+}
+/* line 36, ../../src/scss/modules/_form.scss */
+.form-container .btn {
+  margin-top: 1em;
+  padding: .5em 4em;
+}
+
+@media only screen and (max-width: 780px) {
+  /* line 44, ../../src/scss/modules/_form.scss */
+  .form-container .btn {
+    width: 100%;
+    padding: .5em 0em;
+  }
+}
+@media only screen and (max-width: 485px) {
+  /* line 54, ../../src/scss/modules/_form.scss */
+  .form-container form .row {
+    flex-direction: column;
+  }
+  /* line 56, ../../src/scss/modules/_form.scss */
+  .form-container form .row .column {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

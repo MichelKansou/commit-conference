@@ -31,3 +31,33 @@ footer {
         }
     }
 }
+
+@media only screen and (max-width : 1050px) {
+    footer {
+        #contact {
+            padding: 100px 50px;
+        }
+        .more-info {
+            padding: 100px 30px;
+            .social-media {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width : 780px) {
+    footer {
+        flex-direction: column;
+        #contact {
+            width: 100%;
+        }
+        .more-info {
+            width: 100%;
+            padding: 20px 30px;
+            .social-media {
+                font-size: 20px;
+            }
+        }
+    }
+}

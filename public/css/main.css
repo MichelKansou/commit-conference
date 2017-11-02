@@ -468,6 +468,182 @@ footer .more-info .social-media:hover {
   margin: 1em auto;
 }
 
+/* Header */
+/* line 3, ../../src/scss/modules/_navigation.scss */
+.headerNav {
+  background: #F8F6F6;
+  height: 60px;
+  position: fixed;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* line 11, ../../src/scss/modules/_navigation.scss */
+.logo {
+  font-family: inherit;
+  font-size: 1.5em;
+  margin-left: 1em;
+}
+/* line 15, ../../src/scss/modules/_navigation.scss */
+.logo a {
+  color: #313131;
+  text-decoration: none;
+  opacity: 1;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 20, ../../src/scss/modules/_navigation.scss */
+.logo a:hover {
+  opacity: 0.85;
+}
+
+/* Mobile menu */
+/* line 27, ../../src/scss/modules/_navigation.scss */
+#menu-icon {
+  display: block;
+  font-size: 2.5rem;
+  color: #BA82F8;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 1;
+  padding: 0 .5em;
+}
+/* line 37, ../../src/scss/modules/_navigation.scss */
+#menu-icon:hover {
+  opacity: 0.85;
+  text-decoration: none;
+  border: none;
+}
+
+/* line 44, ../../src/scss/modules/_navigation.scss */
+.navigation-bar {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 51, ../../src/scss/modules/_navigation.scss */
+.navbar {
+  background-color: #F8F6F6;
+  height: 0;
+  overflow-y: scroll;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  -webkit-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+}
+/* line 56, ../../src/scss/modules/_navigation.scss */
+.navbar.active {
+  height: 160px;
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+}
+/* line 61, ../../src/scss/modules/_navigation.scss */
+.navbar .menu {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+/* line 65, ../../src/scss/modules/_navigation.scss */
+.navbar .menu li {
+  list-style-type: none;
+  display: block;
+}
+/* line 68, ../../src/scss/modules/_navigation.scss */
+.navbar .menu li.language-responsive-button {
+  display: block;
+}
+/* line 71, ../../src/scss/modules/_navigation.scss */
+.navbar .menu li a {
+  display: block;
+  height: 50px;
+  padding: 15px;
+  text-decoration: none;
+  color: #BA82F8;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 79, ../../src/scss/modules/_navigation.scss */
+.navbar .menu li a:hover {
+  color: #9244E7;
+}
+/* line 83, ../../src/scss/modules/_navigation.scss */
+.navbar .menu li a.active {
+  color: #9244E7;
+}
+
+/* line 92, ../../src/scss/modules/_navigation.scss */
+.expand {
+  max-height: 20em;
+}
+
+@media only screen and (min-width: 904px) {
+  /* line 98, ../../src/scss/modules/_navigation.scss */
+  .wrap {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* line 105, ../../src/scss/modules/_navigation.scss */
+  .logo {
+    margin-left: 1em;
+  }
+
+  /* line 109, ../../src/scss/modules/_navigation.scss */
+  .logo, .navbar {
+    display: inline-block;
+  }
+
+  /* Mobile menu icon */
+  /* line 114, ../../src/scss/modules/_navigation.scss */
+  #menu-icon {
+    display: none;
+  }
+
+  /* line 118, ../../src/scss/modules/_navigation.scss */
+  .navbar {
+    height: 60px;
+    overflow-y: hidden;
+  }
+  /* line 123, ../../src/scss/modules/_navigation.scss */
+  .navbar .menu li {
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    text-transform: capitalize;
+  }
+  /* line 128, ../../src/scss/modules/_navigation.scss */
+  .navbar .menu li.language-responsive-button {
+    display: none;
+  }
+  /* line 131, ../../src/scss/modules/_navigation.scss */
+  .navbar .menu li a {
+    display: block;
+    border-bottom: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  /* line 141, ../../src/scss/modules/_navigation.scss */
+  .navbar .menu li a:hover {
+    box-shadow: 0 -3px 0 #BA82F8 inset;
+  }
+  /* line 145, ../../src/scss/modules/_navigation.scss */
+  .navbar .menu li a.active {
+    box-shadow: 0 -3px 0 #BA82F8 inset;
+  }
+}
 /* line 1, ../../src/scss/modules/_button.scss */
 .btn {
   background-color: #9244E7;

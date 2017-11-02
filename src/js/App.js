@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Navigation from './Views/Navigation';
 import Home from './Views/Home';
 import Plan from './Views/Plan';
 import Sponsor from './Views/Sponsor';
@@ -13,6 +14,7 @@ class App extends Component {
     render() {
         return (
             <div className='container'>
+                <Navigation />
                 <Home />
                 <Plan />
                 <Sponsor />

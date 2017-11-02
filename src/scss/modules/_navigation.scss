@@ -1,0 +1,152 @@
+/* Header */
+
+.headerNav {
+	background: $white;
+	height: 60px;
+    position: fixed;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	width: 100%;
+}
+
+.logo {
+	font-family: inherit;
+	font-size: 1.5em;
+	margin-left: 1em;
+	a {
+		color: #313131;
+		text-decoration: none;
+		opacity: 1;
+		@include transition(all 0.2s ease);
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+}
+
+/* Mobile menu */
+#menu-icon {
+	display: block;
+	font-size: 2.5rem;
+	color: $secondary-color;
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+	opacity: 1;
+	padding: 0 .5em;
+
+	&:hover {
+		opacity: 0.85;
+		text-decoration: none;
+		border: none;
+	}
+}
+
+.navigation-bar {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar {
+	background-color: $white;
+	height: 0;
+	overflow-y: scroll;
+	@include transition(max-height .4s);
+	&.active {
+		height: 160px;
+		border-top: 1px solid #e7e7e7;
+    	border-bottom: 1px solid #e7e7e7;
+	}
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		li {
+			list-style-type: none;
+			display: block;
+			&.language-responsive-button {
+				display: block;
+			}
+			a {
+				display: block;
+				height: 50px;
+    			padding: 15px;
+				text-decoration: none;
+				color: $secondary-color;
+				@include transition(all 0.2s ease);
+
+				&:hover {
+					color: $primary-color;
+				}
+
+				&.active {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+
+//increase the max-height if you add more links.
+.expand {
+	max-height: 20em;
+}
+
+@media only screen and (min-width : 904px) {
+
+	.wrap {
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.logo {
+		margin-left: 1em;
+	}
+
+	.logo, .navbar {
+		display: inline-block;
+	}
+
+	/* Mobile menu icon */
+	#menu-icon {
+		display: none;
+	}
+
+	.navbar {
+		height: 60px;
+		overflow-y: hidden;
+
+		.menu {
+			li {
+				list-style-type: none;
+				display: inline-block;
+				text-align: center;
+				text-transform: capitalize;
+				&.language-responsive-button {
+					display: none;
+				}
+				a {
+					display: block;
+					border-bottom: 0;
+					height: 60px;
+					display: flex;
+					align-items: center;
+					padding-top: 20px;
+				    padding-bottom: 20px;
+				    font-size: 20px;
+
+					&:hover {
+						box-shadow: 0 -3px 0 $secondary-color inset;
+					}
+
+					&.active {
+						box-shadow: 0 -3px 0 $secondary-color inset;
+					}
+				}
+			}
+		}
+	}
+}

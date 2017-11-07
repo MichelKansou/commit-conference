@@ -7,6 +7,7 @@
     border-radius: 10px;
     &:hover {
         cursor: pointer;
+        text-decoration: none;
         background-color: $secondary-color;
     }
 }

@@ -656,6 +656,7 @@ footer .more-info .social-media:hover {
 /* line 8, ../../src/scss/modules/_button.scss */
 .btn:hover {
   cursor: pointer;
+  text-decoration: none;
   background-color: #BA82F8;
 }
 

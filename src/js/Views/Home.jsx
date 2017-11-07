@@ -10,7 +10,7 @@ export default class Home extends Component {
                         <h1 className='title'>Une Conférence dans le futur</h1>
                         <h2 className='description'>Venez et découvrez les futures problématiques d’entreprise en 2020 </h2>
                         <h4 className='date'>25 - 26 Janvier, 2018 • Paris, France</h4>
-                        <button className='btn'>Inscrivez vous !</button>
+                        <a className='btn' href="https://www.eventbrite.fr/e/billets-commit-39608560270">Inscrivez vous !</a>
                     </div>
                 </div>
             </section>

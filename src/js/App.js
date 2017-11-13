@@ -5,7 +5,7 @@ import PostView from './Views/Blog/PostView';
 import { Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import * as firebase from 'firebase';
-import { config } from './secret/config.js';
+// import { config } from './secret/config.js';
 
 const history = createBrowserHistory();
 

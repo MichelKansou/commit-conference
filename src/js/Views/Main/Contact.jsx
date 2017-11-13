@@ -37,7 +37,7 @@ export default class Contact extends Component {
                     subject: subjectRef
                 })
             }).then((res)=> {
-                if (res.status == 400) {
+                if (res.status === 400) {
                     this.setState({
                         success: false,
                         loading: false,
@@ -95,7 +95,7 @@ export default class Contact extends Component {
                             </div>
                         </form>
                         <Button loading={loading} call={() => this.sendEmail()} text='Envoyer' />
-                        {message ? <p className={this.state.success ? 'message positive' : 'message negative'}>{message}</p>: null}
+                        {message ? <p className={success ? 'message positive' : 'message negative'}>{message}</p>: null}
                     </div>
                 </div>
             </section>

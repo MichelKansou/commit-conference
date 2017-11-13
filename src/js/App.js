@@ -5,16 +5,27 @@ import PostView from './Views/Blog/PostView';
 import { Route, Switch } from 'react-router';
 import { createBrowserHistory } from 'history';
 import * as firebase from 'firebase';
-// import { config } from './secret/config.js';
-
 const history = createBrowserHistory();
 
 class App extends Component {
 
     constructor(props) {
         super(props);
-        console.log(process.env.REACT_APP_API_KEY);
-        // firebase.initializeApp(config);
+        let config;
+        if (process.env.NODE_ENV === "development") {
+            config = require('./secret/config.json')
+        } else {
+            config = {
+                apiKey: process.env.REACT_APP_API_KEY,
+                authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+                databaseURL: process.env.REACT_APP_DATABASE_URL,
+                projectId: process.env.REACT_APP_PROJECT_ID,
+                storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+                messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
+            }
+        }
+
+        firebase.initializeApp(config);
     }
 
     render() {

@@ -13,7 +13,8 @@ class App extends Component {
 
     constructor(props) {
         super(props);
-        firebase.initializeApp(config);
+        console.log(process.env.APIKEY);
+        // firebase.initializeApp(config);
     }
 
     render() {

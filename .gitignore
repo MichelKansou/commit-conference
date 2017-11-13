@@ -24,5 +24,3 @@ yarn-error.log*
 ### Sass ###
 .sass-cache/
 *.css.map
-
-src/js/secret/

@@ -12,7 +12,7 @@ class App extends Component {
     constructor(props) {
         super(props);
         let config;
-        if (process.env.NODE_ENV === "development") {
+        if (process.env.NODE_ENV === "local") {
             config = require('./secret/config.json')
         } else {
             config = {

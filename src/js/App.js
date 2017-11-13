@@ -24,6 +24,7 @@ class App extends Component {
                 messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID
             }
         }
+        console.log(process.env.NODE_ENV);
         console.log(config);
         firebase.initializeApp(config);
     }

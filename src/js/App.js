@@ -1,25 +1,29 @@
 import React, { Component } from 'react';
-import Navigation from './Views/Navigation';
-import Home from './Views/Home';
-import Plan from './Views/Plan';
-import Sponsor from './Views/Sponsor';
-import Footer from './Views/Footer';
+import Main from './Main';
+import Blog from './Blog';
+import PostView from './Views/Blog/PostView';
+import { Route, Switch } from 'react-router';
+import { createBrowserHistory } from 'history';
+import * as firebase from 'firebase';
+import { config } from './secret/config.js';
+
+const history = createBrowserHistory();
 
 class App extends Component {
+
     constructor(props) {
         super(props);
-        this.state = {};
+        firebase.initializeApp(config);
     }
 
     render() {
         return (
-            <div className='container'>
-                <Navigation />
-                <Home />
-                <Plan />
-                <Sponsor />
-                <Footer />
-            </div>
+            <Switch history={history}>
+                <Route exact path="/" component={Main}/>
+                <Route exact path="/blog" component={Blog}/>
+                <Route path="/blog/:id" component={PostView}/>
+                <Route path="/*" component={Main}/>
+            </Switch>
         );
     }
 }

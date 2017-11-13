@@ -19,6 +19,32 @@ footer {
         padding: 100px 50px;
         background-color: #E7E7E7;
         color: $gray;
+        display: flex;
+        flex-direction: column;
+        a {
+            color: $gray;
+            text-decoration: none;
+            /* unvisited link */
+            &:link {
+               color: $gray;
+            }
+
+            /* visited link */
+            &:visited {
+               color: $gray;
+            }
+
+            /* mouse over link */
+            &:hover {
+               color: $gray;
+               text-decoration: none;
+            }
+
+            /* selected link */
+            &:active {
+               color: $gray;
+            }
+        }
         .social-media {
             font-size: 25px;
             i {

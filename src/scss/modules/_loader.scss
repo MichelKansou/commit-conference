@@ -1,0 +1,19 @@
+.sk-fade-in {
+    animation: sk-fade-in 1s!important;
+    &.sk-spinner {
+        color: $white!important;
+        &.sk-three-bounce {
+            div {
+                width: 30px;
+                height: 30px;
+                margin: 0 .3em;
+            }
+        }
+    }
+    &.line-scale {
+        height: 25px;
+        div {
+            height: 21px;
+        }
+    }
+}

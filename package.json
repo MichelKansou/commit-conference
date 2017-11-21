@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^4.6.2",
+    "moment": "^2.19.2",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-router": "^4.2.0",
@@ -14,7 +15,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-dev": "NODE_ENV=local  react-scripts start",
+    "start-dev": "NODE_ENV=test react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

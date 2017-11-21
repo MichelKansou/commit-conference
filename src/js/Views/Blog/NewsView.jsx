@@ -1,38 +1,43 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 
-String.prototype.trunc = String.prototype.trunc ||
-function(n){
-  return (this.length > n) ? this.substr(0, n-1) + '...' : this;
-};
+// String.prototype.trunc = String.prototype.trunc ||
+// function(n){
+//   return (this.length > n) ? this.substr(0, n-1) + '...' : this;
+// };
 
 export default class NewsView extends Component {
 
     constructor(props, context) {
        super(props, context);
+       this.state = {
+           news: this.props.data,
+           history: this.context.router.history
+       };
     }
 
 
     render() {
-        const data = this.props.data
-        const history = this.context.router.history
-        const news = data.news.map((data, index) =>
-           <div className='post' key={index} onClick={() => history.push("/blog/"+index)}>
+        const { news, history } = this.state
+        const post = news.map((data, index) =>
+           <div className='post' key={index} onClick={() => history.push("/blog/"+data.id)}>
                <div className='thumbnail'>
-                   <img className='image' src={'data:image/png;base64, ' + data.image} alt='article image' />
+                   <img className='image' src={'data:image/png;base64, ' + data.image} alt='article' />
                    <h2 className='title'>{data.title}</h2>
                </div>
                <p className='body'>
-                   {data.body.trunc(150)}
+                   {data.shortDescription}
                </p>
+               <h4 className='date'>{moment.unix(data.timestamp).format("DD-MM-YYYY, HH:mm")}</h4>
            </div>
         )
 
         return (
             <div className='news'>
                 <h1 className='section-title'>Articles</h1>
-                {news}
+                {post}
             </div>
         );
     }
@@ -43,5 +48,5 @@ NewsView.contextTypes = {
 }
 
 NewsView.propTypes = {
-    data: PropTypes.object
+    data: PropTypes.array
 };

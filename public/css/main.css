@@ -201,13 +201,14 @@ main#app .container {
 /* line 1, ../../src/scss/layouts/_plan.scss */
 #plan {
   padding: 100px 150px;
+  border-bottom: 1px solid #607D8B;
 }
-/* line 3, ../../src/scss/layouts/_plan.scss */
+/* line 4, ../../src/scss/layouts/_plan.scss */
 #plan .container {
   max-width: 1200px;
   margin: auto;
 }
-/* line 6, ../../src/scss/layouts/_plan.scss */
+/* line 7, ../../src/scss/layouts/_plan.scss */
 #plan .container .title {
   font-weight: 600;
   font-size: 40px;
@@ -216,39 +217,35 @@ main#app .container {
   border-bottom: 3px solid #607D8B;
   margin-bottom: 40px;
 }
-/* line 14, ../../src/scss/layouts/_plan.scss */
+/* line 15, ../../src/scss/layouts/_plan.scss */
 #plan .container .date {
   font-size: 22px;
   font-weight: 500;
 }
-/* line 19, ../../src/scss/layouts/_plan.scss */
+/* line 20, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid {
   margin-top: 2em;
 }
-/* line 21, ../../src/scss/layouts/_plan.scss */
+/* line 22, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid .row {
   display: flex;
   margin-bottom: 2em;
 }
-/* line 24, ../../src/scss/layouts/_plan.scss */
+/* line 25, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid .row:last-child {
   margin-bottom: 0;
+  max-width: 500px;
 }
-/* line 27, ../../src/scss/layouts/_plan.scss */
+/* line 29, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid .row .column {
   width: 100%;
 }
-/* line 29, ../../src/scss/layouts/_plan.scss */
-#plan .container .grid .row .column .container {
-  max-width: 480px;
-}
-/* line 31, ../../src/scss/layouts/_plan.scss */
+/* line 32, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid .row .column .container .subject-logo {
-  width: 120px;
-  height: 120px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background-color: cornflowerblue;
-  float: left;
   margin-right: 2em;
 }
 /* line 39, ../../src/scss/layouts/_plan.scss */
@@ -262,44 +259,60 @@ main#app .container {
   margin: 1em 0;
 }
 /* line 47, ../../src/scss/layouts/_plan.scss */
+#plan .container .grid .row .column .container .column {
+  width: 70%;
+}
+/* line 50, ../../src/scss/layouts/_plan.scss */
 #plan .container .grid .row .column .container .subject-date {
   float: right;
 }
 
 @media only screen and (max-width: 1300px) {
-  /* line 60, ../../src/scss/layouts/_plan.scss */
+  /* line 63, ../../src/scss/layouts/_plan.scss */
   #plan {
     padding: 100px 50px;
   }
 }
-@media only screen and (max-width: 1060px) {
-  /* line 74, ../../src/scss/layouts/_plan.scss */
+@media only screen and (max-width: 1140px) {
+  /* line 73, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row {
     flex-direction: column;
   }
-  /* line 77, ../../src/scss/layouts/_plan.scss */
+  /* line 76, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row .column:first-child {
     margin-bottom: 2em;
   }
-  /* line 80, ../../src/scss/layouts/_plan.scss */
+  /* line 79, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row .column .container {
     max-width: 100%;
   }
+  /* line 81, ../../src/scss/layouts/_plan.scss */
+  #plan .container .grid .row .column .container .row {
+    flex-direction: row;
+  }
 }
 @media only screen and (max-width: 560px) {
-  /* line 92, ../../src/scss/layouts/_plan.scss */
+  /* line 94, ../../src/scss/layouts/_plan.scss */
   #plan {
     padding: 100px 30px;
   }
-  /* line 98, ../../src/scss/layouts/_plan.scss */
+  /* line 100, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row .column .container {
     display: flex;
     flex-direction: column;
     text-align: center;
   }
-  /* line 102, ../../src/scss/layouts/_plan.scss */
-  #plan .container .grid .row .column .container .subject-logo {
+  /* line 104, ../../src/scss/layouts/_plan.scss */
+  #plan .container .grid .row .column .container .row {
+    flex-direction: column;
+  }
+  /* line 105, ../../src/scss/layouts/_plan.scss */
+  #plan .container .grid .row .column .container .row .subject-logo {
     margin: auto;
+  }
+  /* line 109, ../../src/scss/layouts/_plan.scss */
+  #plan .container .grid .row .column .container .row .column {
+    width: 100%;
   }
 }
 /* line 1, ../../src/scss/layouts/_sponsor.scss */
@@ -439,7 +452,7 @@ footer .more-info .social-media:hover {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1250px) {
   /* line 63, ../../src/scss/layouts/_footer.scss */
   footer #contact {
     padding: 100px 50px;

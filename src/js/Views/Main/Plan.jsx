@@ -97,7 +97,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img src='' className='subject-logo'></img>
+                                            <img class='subject-logo' src="./images/subjects logo/logo-competitive.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Compétitivité des entreprises</h3>

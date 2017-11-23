@@ -470,13 +470,8 @@ footer .more-info {
   flex-direction: column;
 }
 
-<<<<<<< HEAD
-@media only screen and (max-width: 1050px) {
-  /* line 77, ../../src/scss/layouts/_footer.scss */
-=======
 @media only screen and (max-width: 1250px) {
-  /* line 63, ../../src/scss/layouts/_footer.scss */
->>>>>>> master
+  /* line 77, ../../src/scss/layouts/_footer.scss */
   footer #contact {
     padding: 100px 50px;
   }

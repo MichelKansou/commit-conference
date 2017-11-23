@@ -310,10 +310,14 @@ main#app .container {
     flex-direction: column;
   }
   /* line 107, ../../src/scss/layouts/_plan.scss */
+  #plan .container .grid .row .column .container .row .image-container {
+    margin: auto;
+  }
+  /* line 110, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row .column .container .row .subject-logo {
     margin: auto;
   }
-  /* line 111, ../../src/scss/layouts/_plan.scss */
+  /* line 114, ../../src/scss/layouts/_plan.scss */
   #plan .container .grid .row .column .container .row .column {
     width: 100%;
   }
@@ -662,27 +666,28 @@ footer .more-info {
 /* line 1, ../../src/scss/modules/_card.scss */
 .card {
   background-color: #F8F6F6;
+  z-index: 1;
   padding: 4em 8em;
   border-radius: 20px;
   text-align: center;
 }
-/* line 6, ../../src/scss/modules/_card.scss */
+/* line 7, ../../src/scss/modules/_card.scss */
 .card .main-logo {
   max-width: 150px;
 }
-/* line 9, ../../src/scss/modules/_card.scss */
+/* line 10, ../../src/scss/modules/_card.scss */
 .card .title {
   font-size: 70px;
   font-weight: 500;
   margin: auto;
 }
-/* line 14, ../../src/scss/modules/_card.scss */
+/* line 15, ../../src/scss/modules/_card.scss */
 .card .description {
   font-size: 30px;
   max-width: 780px;
   margin: 1em auto;
 }
-/* line 19, ../../src/scss/modules/_card.scss */
+/* line 20, ../../src/scss/modules/_card.scss */
 .card .date {
   font-size: 20px;
   color: #F44336;
@@ -697,7 +702,7 @@ footer .more-info {
   position: fixed;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 }
 
 /* line 12, ../../src/scss/modules/_navigation.scss */
@@ -967,6 +972,69 @@ footer .more-info {
 /* line 15, ../../src/scss/modules/_loader.scss */
 .sk-fade-in.line-scale div {
   height: 21px;
+}
+
+/* line 1, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image {
+  position: absolute;
+  max-width: 80px;
+}
+/* line 4, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.triangle {
+  bottom: 5em;
+  left: 5em;
+  animation: float-up 3s ease-in-out infinite;
+}
+/* line 9, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.circle {
+  left: 15em;
+  top: 5em;
+  animation: float-down 3s ease-in-out infinite;
+}
+/* line 15, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.rectangle {
+  right: 8em;
+  top: 10em;
+  animation: float-down 2s ease-in-out infinite;
+}
+/* line 20, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.x {
+  bottom: 5em;
+  animation: float-up 4s ease-in-out infinite;
+}
+/* line 24, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.rectangle2 {
+  right: 6em;
+  bottom: 15em;
+  animation: float-down 2s ease-in-out infinite;
+}
+/* line 29, ../../src/scss/modules/_iconAnimation.scss */
+.icon-image.circle2 {
+  left: 2em;
+  animation: float-down 4s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-15px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+@keyframes float-down {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(15px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

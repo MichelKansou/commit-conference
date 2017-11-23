@@ -12,12 +12,12 @@ class Main extends Component {
     }
 
     render() {
-        // <Sponsor />
         return (
             <div className='container'>
                 <Navigation />
                 <Home />
                 <Plan />
+                <Sponsor />
                 <Footer />
             </div>
         );

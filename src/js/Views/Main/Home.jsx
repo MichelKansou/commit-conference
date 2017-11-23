@@ -6,6 +6,12 @@ export default class Home extends Component {
         return (
             <section id='home'>
                 <div className='container'>
+                    <img className='icon-image triangle' alt='background-icons' src='./images/background icons/Triangle.png'></img>
+                    <img className='icon-image circle' alt='background-icons' src='./images/background icons/Circle.png'></img>
+                    <img className='icon-image rectangle' alt='background-icons' src='./images/background icons/Rectangle.png'></img>
+                    <img className='icon-image x' alt='background-icons' src='./images/background icons/X.png'></img>
+                    <img className='icon-image rectangle2' alt='background-icons' src='./images/background icons/Rectangle 2.png'></img>
+                    <img className='icon-image circle2' alt='background-icons' src='./images/background icons/Circle 2.png'></img>
                     <div className='card'>
                         <img className='main-logo' alt='commit logo' src='./images/commit-logo.png'></img>
                         <h1 className='title'>Participez, Anticipez, Agissez</h1>

@@ -13,7 +13,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-quantum.png"/>
+                                            <img className='subject-logo' alt='Commit - Ordinateurs quantiques' src='./images/subjects logo/logo-quantum.png'/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Ordinateurs quantiques</h3>
@@ -29,7 +29,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-reactive.png"/>
+                                            <img className='subject-logo' alt='Commit - Reactive System' src='./images/subjects logo/logo-reactive.png'/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Reactive System</h3>
@@ -47,7 +47,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-iot.png"/>
+                                            <img className='subject-logo' alt='Commit - Internet Of Things' src="./images/subjects logo/logo-iot.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Internet Of Things</h3>
@@ -63,7 +63,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-mixed-reality.png"/>
+                                            <img className='subject-logo' alt='Commit - Mixed Reality' src="./images/subjects logo/logo-mixed-reality.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Mixed Reality</h3>
@@ -81,7 +81,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-web-semantic.png"/>
+                                            <img className='subject-logo' alt='Commit - Web sémantique' src="./images/subjects logo/logo-web-semantic.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Web sémantique</h3>
@@ -97,7 +97,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-competitive.png"/>
+                                            <img className='subject-logo' alt='Commit - Compétitivité des entreprises' src="./images/subjects logo/logo-competitive.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Compétitivité des entreprises</h3>
@@ -115,7 +115,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-evolution-si.png"/>
+                                            <img className='subject-logo' alt='Commit - Évolution des matériels du SI' src="./images/subjects logo/logo-evolution-si.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Évolution des matériels du SI</h3>
@@ -131,7 +131,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-JS.png"/>
+                                            <img className='subject-logo' alt='Commit - Isomorphic JavaScript' src="./images/subjects logo/logo-JS.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Isomorphic JavaScript</h3>
@@ -149,7 +149,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-ethereum.png"/>
+                                            <img className='subject-logo' alt='Commit - Blockchain et DApps' src="./images/subjects logo/logo-ethereum.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Blockchain et DApps</h3>
@@ -165,7 +165,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-3d-printer.png"/>
+                                            <img className='subject-logo' alt='Commit - Impression 3D' src="./images/subjects logo/logo-3d-printer.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Impression 3D</h3>
@@ -183,7 +183,7 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img class='subject-logo' src="./images/subjects logo/logo-lifi.png"/>
+                                            <img className='subject-logo' alt='Commit - Le Lifi' src="./images/subjects logo/logo-lifi.png"/>
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Le Lifi</h3>

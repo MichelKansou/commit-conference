@@ -1,8 +1,32 @@
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 
 export default class Home extends Component {
+    constructor() {
+        super();
+
+        this.state = {
+            modalIsOpen: false
+        };
+
+        this.openModal = this.openModal.bind(this);
+        this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
+    }
+
+    openModal() {
+        this.setState({modalIsOpen: true});
+    }
+
+    afterOpenModal() {
+
+    }
+
+    closeModal() {
+        this.setState({modalIsOpen: false});
+    }
+
     render() {
-        // <a className='btn' href="https://www.eventbrite.fr/e/billets-commit-39608560270">Inscrivez vous !</a>
         return (
             <section id='home'>
                 <div className='container'>
@@ -17,7 +41,24 @@ export default class Home extends Component {
                         <h1 className='title'>Participez, Anticipez, Agissez</h1>
                         <h2 className='description'>Venez et découvrez les futures problématiques d’entreprise en 2020 </h2>
                         <h4 className='date'>25 - 26 Janvier, 2018 • Arras, France</h4>
+                        <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
                     </div>
+                    <Modal
+                        isOpen={this.state.modalIsOpen}
+                        onAfterOpen={this.afterOpenModal}
+                        onRequestClose={this.closeModal}
+                        shouldCloseOnOverlayClick={true}
+                        className={{
+                            base: 'custom-modal'
+                        }}
+                        contentLabel="Example Modal"
+                        >
+                        <div className='container'>
+                            <i className="fa fa-times-circle" aria-hidden="true" onClick={this.closeModal}></i>
+                            <h2 className='title'>Inscription</h2>
+                            <p className='description'>Choisissez votre jour</p>
+                        </div>
+                    </Modal>
                 </div>
             </section>
         );

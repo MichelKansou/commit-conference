@@ -27,6 +27,7 @@ export default class Home extends Component {
     }
 
     render() {
+        // <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
         return (
             <section id='home'>
                 <div className='container'>
@@ -41,7 +42,6 @@ export default class Home extends Component {
                         <h1 className='title'>Participez, Anticipez, Agissez</h1>
                         <h2 className='description'>Venez et découvrez les futures problématiques d’entreprise en 2020 </h2>
                         <h4 className='date'>25 - 26 Janvier, 2018 • Arras, France</h4>
-                        <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
                     </div>
                     <Modal
                         isOpen={this.state.modalIsOpen}

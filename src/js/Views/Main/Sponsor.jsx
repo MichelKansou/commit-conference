@@ -12,7 +12,7 @@ export default class Sponsor extends Component {
                         <p>Pour en savoir plus sur nos partenaires, cliquez sur leur logo!</p>
                     </div>
                     <div className='row'>
-                        <a href='#'><img className='partner-logo' src='./images/commit-logo.png' alt='Commit Conference Partner'></img></a>
+                        <a href='#'><img className='partner-logo' src='./images/sponsors/adoc-it-logo.png' alt='Commit Conference Partner'></img></a>
                     </div>
                 </div>
             </section>

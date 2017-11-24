@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import scrollToElement from 'scroll-to-element';
 
-export default class Navigation extends React.Component {
-    constructor(props) {
-        super(props);
+export default class Navigation extends Component {
+    constructor(props, context) {
+        super(props, context);
         this.state = {
             navTitle: 'Commit',
-            activeRM: false
+            activeRM: false,
+            history: this.context.router.history
         };
     }
 
@@ -15,6 +17,7 @@ export default class Navigation extends React.Component {
     }
 
     smoothScroll(sectionId) {
+        this.state.history.push('/');
         scrollToElement(sectionId, {
         	offset: -50,
         	ease: 'out-circ',
@@ -34,6 +37,7 @@ export default class Navigation extends React.Component {
                         <ul className='menu'>
                             <li><a onClick={() => this.smoothScroll('#home')} href='#home'> Accueil </a></li>
                             <li><a onClick={() => this.smoothScroll('#plan')} href='#planning'> Planning </a></li>
+                            <li><a onClick={() => this.state.history.push('/blog/')}> Blog </a></li>
                             <li><a onClick={() => this.smoothScroll('#contact')} href='#contact'> Contact </a></li>
                         </ul>
                     </nav>
@@ -41,4 +45,8 @@ export default class Navigation extends React.Component {
             </header>
         );
     }
+}
+
+Navigation.contextTypes = {
+  router: PropTypes.object
 }

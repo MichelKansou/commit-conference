@@ -1,0 +1,35 @@
+.ReactModal__Overlay.ReactModal__Overlay--after-open{
+    z-index: 1;
+}
+
+.custom-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    .container {
+        background-color: $primary-color;
+        color: $white;
+        padding: 3em;
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        .title {
+            font-weight: 600;
+            font-size: 40px;
+            display: inline-block;
+            padding-bottom: 10px;
+            border-bottom: 3px solid $white;
+            margin-bottom: 40px;
+        }
+        .fa-times-circle {
+            cursor: pointer;
+            position: absolute;
+            right: .5em;
+            top: .5em;
+            font-size: 2.5rem;
+        }
+    }
+}

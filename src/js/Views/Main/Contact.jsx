@@ -9,19 +9,59 @@ export default class Contact extends Component {
         this.state = {
             loading: false,
             message: '',
-            success: false
+            success: false,
+            fields: {},
+            errors: {}
         };
     };
 
+    handleChange(field, e){
+        let fields = this.state.fields;
+        fields[field] = e.target.value;
+        this.setState({fields});
+        this.handleValidation();
+    }
+
+    handleValidation(){
+            let fields = this.state.fields;
+            let errors = {};
+            let formIsValid = true;
+
+            //Email
+            if(!fields["email"]){
+               formIsValid = false;
+               errors["email"] = "L'email est vide";
+            }
+
+            if(!fields["name"]){
+               formIsValid = false;
+               errors["name"] = "Le champ Nom est vide";
+            }
+
+            if(!fields["message"]){
+               formIsValid = false;
+               errors["message"] = "Le champ message est vide";
+            }
+
+            if(typeof fields["email"] !== "undefined"){
+                let lastAtPos = fields["email"].lastIndexOf('@');
+                let lastDotPos = fields["email"].lastIndexOf('.');
+
+                if (!(lastAtPos < lastDotPos && lastAtPos > 0 && fields["email"].indexOf('@@') == -1 && lastDotPos > 2 && (fields["email"].length - lastDotPos) > 2)) {
+                  formIsValid = false;
+                  errors["email"] = "L'email renseigné n'est pas valide";
+                }
+           }
+
+           this.setState({errors: errors});
+           return formIsValid;
+       }
+
     sendEmail = () => {
         let form = document.querySelector('form')
+        let fields = this.state.fields;
 
-        let name = this.nameRef.value
-        let email = this.emailRef.value
-        let companyName = this.companyNameRef.value
-        let message = this.messageRef.value
-        let subjectRef = "Commit Contact"
-        if (name && email && message && subjectRef && companyName) {
+        if (this.handleValidation()) {
             this.setState({ loading: true });
             return fetch('https://formspree.io/commit-event@outlook.fr', {
                 method: 'POST',
@@ -30,21 +70,14 @@ export default class Contact extends Component {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    name: name,
-                    email: email,
-                    companyName: companyName,
-                    message: message,
-                    subject: subjectRef
+                    name: fields["name"],
+                    email: fields["email"],
+                    companyName: fields["companyName"] ? fields["companyName"] : "",
+                    message: fields["message"],
+                    subject: "Commit Contact"
                 })
             }).then((res)=> {
-                if (res.status === 400) {
-                    this.setState({
-                        success: false,
-                        loading: false,
-                        message: "une erreur s'est produite vous pouvez nous contacter directement à l'adresse suivante : commit-event@outlook.fr"
-                    });
-                    form.reset();
-                } else {
+                if (res.ok) {
                     this.setState({
                         success: true,
                         loading: false,
@@ -52,13 +85,22 @@ export default class Contact extends Component {
                     });
                     form.reset();
                     console.log(res);
+                } else {
+                    this.setState({
+                        success: false,
+                        loading: false,
+                        message: "une erreur s'est produite vous pouvez nous contacter directement à l'adresse suivante : commit-event@outlook.fr"
+                    });
+                    form.reset();
                 }
+                console.log(res);
             });
         } else {
             this.setState({
                 success: false,
                 message: 'Veuillez remplir tous les champs.'
             });
+            form.reset();
         }
     }
 
@@ -74,24 +116,27 @@ export default class Contact extends Component {
                             <div className='row'>
                                 <div className='column'>
                                     <div className='field'>
-                                        <div className='header'>Nom</div>
-                                        <input name='name' type='text' placeholder='Votre nom' ref={(ref) => this.nameRef = ref} />
+                                        <div className='header'>Nom*</div>
+                                        <input name='name' type='text' placeholder='Votre nom' onChange={(e) => this.handleChange("name", e)} value={this.state.fields["name"] ? this.state.fields["name"] : ""} />
+                                        <span style={{color: "red"}}>{this.state.errors["name"]}</span>
                                     </div>
                                 </div>
                                 <div className='column'>
                                     <div className='field'>
                                         <div className='header'>Nom de la société</div>
-                                        <input name='company' type='text' placeholder='Nom de votre société' ref={(ref) => this.companyNameRef = ref} />
+                                        <input name='company' type='text' placeholder='Nom de votre société' onChange={(e) => this.handleChange("companyName", e)} value={this.state.fields["companyName"] ? this.state.fields["companyName"] : ""} />
                                     </div>
                                 </div>
                             </div>
                             <div className='field'>
-                                <div className='header'>Email</div>
-                                <input name='email' type='text' placeholder='Votre adresse email' ref={(ref) => this.emailRef = ref} />
+                                <div className='header'>Email*</div>
+                                    <input name='email' type='text' placeholder='Votre adresse email' onChange={(e) => this.handleChange("email", e)} value={this.state.fields["email"] ? this.state.fields["email"] : ""} />
+                                    <span style={{color: "red"}}>{this.state.errors["email"]}</span>
                             </div>
                             <div className='field'>
-                                <div className='header'>Message</div>
-                                <textarea name='message' placeholder='Votre message' ref={(ref) => this.messageRef = ref} />
+                                <div className='header'>Message*</div>
+                                <textarea name='message' placeholder='Votre message' onChange={(e) => this.handleChange("message", e)} value={this.state.fields["message"] ? this.state.fields["message"] : ""} />
+                                <span style={{color: "red"}}>{this.state.errors["message"]}</span>
                             </div>
                         </form>
                         <Button loading={loading} call={() => this.sendEmail()} text='Envoyer' />

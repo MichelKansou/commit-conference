@@ -1,0 +1,87 @@
+.icon-image {
+    position: absolute;
+    max-width: 80px;
+    &.triangle {
+        bottom: 5em;
+        left: 5em;
+        animation: float-up 3s ease-in-out infinite;
+    }
+    &.circle {
+        left: 15em;
+        top: 5em;
+        animation: float-down 3s ease-in-out infinite;
+    }
+
+    &.rectangle {
+        right: 8em;
+        top: 10em;
+        animation: float-down 4s ease-in-out infinite;
+    }
+    &.x {
+        bottom: 5em;
+        animation: float-up 4s ease-in-out infinite;
+    }
+    &.rectangle2 {
+        right: 6em;
+        bottom: 15em;
+        animation: float-down 4s ease-in-out infinite;
+    }
+    &.circle2 {
+        left: 2em;
+        animation: float-down 4s ease-in-out infinite;
+    }
+}
+
+@media only screen and (max-width : 780px) {
+    .icon-image {
+        max-width: 50px;
+        &.triangle {
+            bottom: 2em;
+            left: 3em;
+        }
+        &.circle {
+            left: 3em;
+            top: 4em;
+        }
+
+        &.rectangle {
+            right: 3em;
+            top: 4em;
+        }
+        &.x {
+            bottom: 2em;
+        }
+        &.rectangle2 {
+            right: 3em;
+            bottom: 2em;
+        }
+        &.circle2 {
+            top: 4em;
+            left: inherit;
+        }
+    }
+}
+
+@keyframes float-up {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+@keyframes float-down {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(15px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

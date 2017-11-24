@@ -15,7 +15,7 @@
     &.rectangle {
         right: 8em;
         top: 10em;
-        animation: float-down 2s ease-in-out infinite;
+        animation: float-down 4s ease-in-out infinite;
     }
     &.x {
         bottom: 5em;
@@ -24,11 +24,41 @@
     &.rectangle2 {
         right: 6em;
         bottom: 15em;
-        animation: float-down 2s ease-in-out infinite;
+        animation: float-down 4s ease-in-out infinite;
     }
     &.circle2 {
         left: 2em;
         animation: float-down 4s ease-in-out infinite;
+    }
+}
+
+@media only screen and (max-width : 780px) {
+    .icon-image {
+        max-width: 50px;
+        &.triangle {
+            bottom: 2em;
+            left: 3em;
+        }
+        &.circle {
+            left: 3em;
+            top: 4em;
+        }
+
+        &.rectangle {
+            right: 3em;
+            top: 4em;
+        }
+        &.x {
+            bottom: 2em;
+        }
+        &.rectangle2 {
+            right: 3em;
+            bottom: 2em;
+        }
+        &.circle2 {
+            top: 4em;
+            left: inherit;
+        }
     }
 }
 

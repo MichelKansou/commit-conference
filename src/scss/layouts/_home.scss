@@ -1,7 +1,8 @@
 #home{
     height: 100%;
+    box-shadow: 0 5px 5px rgba(96, 125, 139, 0.3);
     .container {
-        background: $background-gradient;
+        // background: $background-gradient;
         display: flex;
         justify-content: center;
         align-items: center;

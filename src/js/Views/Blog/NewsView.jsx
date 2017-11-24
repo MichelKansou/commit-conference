@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
-
-// String.prototype.trunc = String.prototype.trunc ||
-// function(n){
-//   return (this.length > n) ? this.substr(0, n-1) + '...' : this;
-// };
-
 export default class NewsView extends Component {
 
     constructor(props, context) {
@@ -37,7 +31,9 @@ export default class NewsView extends Component {
         return (
             <div className='news'>
                 <h1 className='section-title'>Articles</h1>
-                {post}
+                <div className='grid'>
+                    {post}
+                </div>
             </div>
         );
     }

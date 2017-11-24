@@ -25,11 +25,15 @@
             text-align: inherit;
             align-self: normal;
             width: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: wrap;
         }
         .image-container {
             position: relative;
             overflow: hidden;
             height: 250px;
+            width: 100%;
             .image {
                 width: 100%;
                 position: absolute;

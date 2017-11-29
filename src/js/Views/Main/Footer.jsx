@@ -9,7 +9,7 @@ export default class Footer extends Component {
                 <Contact />
                 <div className='more-info'>
                     <a className='social-media' href='mailto:commit-event@outlook.fr'><i className='fa fa-envelope'></i>commit-event@outlook.fr</a>
-                    <a className='social-media' target="_blank" href='https://www.facebook.com/Commit-1968713566717788/'><i className='fa fa-facebook'></i>Commit</a>
+                    <a className='social-media' rel='noopener noreferrer' target="_blank" href='https://www.facebook.com/Commit-1968713566717788/'><i className='fa fa-facebook'></i>Commit</a>
                 </div>
             </footer>
         );

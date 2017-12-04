@@ -198,6 +198,13 @@ main#app .container {
     padding: .5em 1em;
   }
 }
+@media only screen and (max-height: 500px) {
+  /* line 62, ../../src/scss/layouts/_home.scss */
+  #home {
+    min-height: 730px;
+    position: relative;
+  }
+}
 /* line 1, ../../src/scss/layouts/_plan.scss */
 #plan {
   padding: 100px 150px;
@@ -919,9 +926,14 @@ footer .more-info {
   text-decoration: none;
   background-color: #FF3D00;
 }
+/* line 13, ../../src/scss/modules/_button.scss */
+.btn.light {
+  background-color: #F8F6F6;
+  color: #F44336;
+}
 
 @media only screen and (max-width: 500px) {
-  /* line 16, ../../src/scss/modules/_button.scss */
+  /* line 20, ../../src/scss/modules/_button.scss */
   .btn {
     font-size: 18px;
   }
@@ -1047,12 +1059,93 @@ footer .more-info {
 /* line 27, ../../src/scss/modules/_modal.scss */
 .custom-modal .container .fa-times-circle {
   cursor: pointer;
+  font-size: 2rem;
+  margin-left: 0.2em;
+  vertical-align: top;
+}
+/* line 33, ../../src/scss/modules/_modal.scss */
+.custom-modal .container .btn-close {
+  background-color: transparent;
+  color: #F8F6F6;
+  border: 0;
   position: absolute;
   right: .5em;
   top: .5em;
-  font-size: 2.5rem;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+/* line 42, ../../src/scss/modules/_modal.scss */
+.custom-modal .container .btn-close:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+/* line 48, ../../src/scss/modules/_modal.scss */
+.custom-modal .container .btn.light {
+  display: block;
+  max-width: 200px;
+  text-align: center;
+  margin-left: auto;
+}
+/* line 56, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form {
+  margin-top: 1em;
+}
+/* line 58, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+}
+/* line 65, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio input {
+  position: absolute;
+  opacity: 0;
+}
+/* line 69, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio:hover input ~ .checkmark {
+  background-color: #607D8B;
+}
+/* line 72, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio input:checked ~ .checkmark {
+  background-color: #F44336;
+}
+/* line 75, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio input:checked ~ .checkmark:after {
+  display: block;
+}
+/* line 78, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: 2px solid #F8F6F6;
+  background-color: #F8F6F6;
+  border-radius: 50%;
+}
+/* line 87, ../../src/scss/modules/_modal.scss */
+.custom-modal .container form .radio .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 7px;
+  left: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #F8F6F6;
 }
 
+@media only screen and (max-width: 768px) {
+  /* line 110, ../../src/scss/modules/_modal.scss */
+  .custom-modal .container .btn.light {
+    margin: auto;
+  }
+}
 /* line 1, ../../src/scss/modules/_iconAnimation.scss */
 .icon-image {
   position: absolute;

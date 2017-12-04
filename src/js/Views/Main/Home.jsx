@@ -6,7 +6,8 @@ export default class Home extends Component {
         super();
 
         this.state = {
-            modalIsOpen: false
+            modalIsOpen: false,
+            selectedOption: 'option1'
         };
 
         this.openModal = this.openModal.bind(this);
@@ -17,17 +18,21 @@ export default class Home extends Component {
     openModal() {
         this.setState({modalIsOpen: true});
     }
-
-    afterOpenModal() {
-
-    }
-
     closeModal() {
         this.setState({modalIsOpen: false});
     }
 
+    afterOpenModal() {
+
+    }
+    handleOptionChange (e) {
+      this.setState({
+        selectedOption: e.target.value
+      });
+    }
+
     render() {
-        // <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
+        const registerLink = this.state.selectedOption == 'option1' ? 'https://www.eventbrite.fr/e/billets-commit-event-journee-1-39958547090' : this.state.selectedOption == 'option2' ? 'https://www.eventbrite.fr/e/billets-commit-event-journee-2-40707693808' : 'https://www.eventbrite.fr/e/billets-commit-event-journee-1-39958547090'
         return (
             <section id='home'>
                 <div className='container'>
@@ -42,6 +47,7 @@ export default class Home extends Component {
                         <h1 className='title'>Participez, Anticipez, Agissez</h1>
                         <h2 className='description'>Venez et découvrez les futures problématiques d’entreprise en 2020 </h2>
                         <h4 className='date'>25 - 26 Janvier, 2018 • Arras, France</h4>
+                        <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
                     </div>
                     <Modal
                         isOpen={this.state.modalIsOpen}
@@ -54,9 +60,32 @@ export default class Home extends Component {
                         contentLabel="Example Modal"
                         >
                         <div className='container'>
-                            <i className="fa fa-times-circle" aria-hidden="true" onClick={this.closeModal}></i>
+                            <button className='btn-close' onClick={this.closeModal}>Fermer<i className="fa fa-times-circle" aria-hidden="true"></i></button>
                             <h2 className='title'>Inscription</h2>
                             <p className='description'>Choisissez votre jour</p>
+                            <form>
+                                <div className="radio">
+                                    <label>
+                                        <input type="radio"
+                                            value="option1"
+                                            checked={this.state.selectedOption === 'option1'}
+                                            onChange={this.handleOptionChange.bind(this)} />
+                                        <span className="checkmark"></span>
+                                        25 Janvier 2018
+                                    </label>
+                                </div>
+                                <div className="radio">
+                                    <label>
+                                        <input type="radio"
+                                            value="option2"
+                                            checked={this.state.selectedOption === 'option2'}
+                                            onChange={this.handleOptionChange.bind(this)} />
+                                        <span className="checkmark"></span>
+                                        26 Janvier 2018
+                                    </label>
+                                </div>
+                            </form>
+                            <a className="btn light" target="_blank" rel='noopener noreferrer' href={registerLink}>Valider</a>
                         </div>
                     </Modal>
                 </div>

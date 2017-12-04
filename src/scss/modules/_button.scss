@@ -10,6 +10,10 @@
         text-decoration: none;
         background-color: $secondary-color;
     }
+    &.light {
+        background-color: $white;
+        color: $primary-color;
+    }
 }
 
 @media only screen and (max-width : 500px) {

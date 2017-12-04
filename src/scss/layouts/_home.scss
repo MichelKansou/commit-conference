@@ -56,3 +56,11 @@
         }
     }
 }
+
+
+@media only screen and (max-height : 500px) {
+    #home {
+        min-height: 730px;
+        position: relative;
+    }
+}

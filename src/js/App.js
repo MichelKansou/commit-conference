@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import Main from './Main';
 import Blog from './Blog';
 import PostView from './Views/Blog/PostView';
-import { Route, Switch } from 'react-router';
-import { createBrowserHistory } from 'history';
+import { Route, Switch, hashHistory } from 'react-router';
+import { createHashHistory } from 'history';
 import * as firebase from 'firebase';
-const history = createBrowserHistory();
+const history = createHashHistory();
 
 class App extends Component {
 

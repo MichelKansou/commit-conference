@@ -26,7 +26,6 @@ export default class Navigation extends Component {
     }
 
     render() {
-        // <li><a onClick={() => this.state.history.push('/blog/')}> Blog </a></li>
         return (
             <header className='headerNav'>
                 <div className='wrap' aria-expanded='true'>
@@ -38,6 +37,7 @@ export default class Navigation extends Component {
                         <ul className='menu'>
                             <li><a onClick={() => this.smoothScroll('#home')} href='#home'> Accueil </a></li>
                             <li><a onClick={() => this.smoothScroll('#plan')} href='#planning'> Planning </a></li>
+                            <li><a onClick={() => this.state.history.push('/blog/')}> Blog </a></li>
                             <li><a onClick={() => this.smoothScroll('#contact')} href='#contact'> Contact </a></li>
                         </ul>
                     </nav>

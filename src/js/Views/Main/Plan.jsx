@@ -49,12 +49,12 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img className='subject-logo' alt='Commit - Web sémantique' src="./images/subjects logo/logo-web-semantic.png"/>
+                                            <img className='subject-logo' alt='Commit - Blockchain et DApps' src="./images/subjects logo/logo-ethereum.png"/>
                                         </div>
                                     <div className='column'>
-                                            <h3 className='subject-title'>Web sémantique</h3>
-                                            <h4 className='subject-description'>En quoi le web sémantique permet de donner du sens aux données ?</h4>
-                                            <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/sfardel/'>FARDEL Simon</a>, <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/hyacintheknobloch/'>KNOBLOCH Hyacinthe</a></h5>
+                                            <h3 className='subject-title'>Blockchain et DApps</h3>
+                                            <h4 className='subject-description'>Comment la blockchain va révolutionner la manière dont on conçoit les applications web grâce aux DApps?</h4>
+                                            <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/michel-kansou-4384a38a/'>KANSOU Michel</a>, <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/simon-raison-9177b2138/'>RAISON Simon</a></h5>
                                             {
                                                 <h5 className='subject-date'>25 janvier 2018, 11h00 - 12h00</h5>
                                         }
@@ -122,12 +122,12 @@ export default class Plan extends Component {
                                 <div className='container'>
                                     <div className='row'>
                                         <div className='image-container'>
-                                            <img className='subject-logo' alt='Commit - Blockchain et DApps' src="./images/subjects logo/logo-ethereum.png"/>
+                                            <img className='subject-logo' alt='Commit - Web sémantique' src="./images/subjects logo/logo-web-semantic.png"/>
                                         </div>
                                     <div className='column'>
-                                            <h3 className='subject-title'>Blockchain et DApps</h3>
-                                            <h4 className='subject-description'>Comment la blockchain va révolutionner la manière dont on conçoit les applications web grâce aux DApps?</h4>
-                                            <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/michel-kansou-4384a38a/'>KANSOU Michel</a>, <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/simon-raison-9177b2138/'>RAISON Simon</a></h5>
+                                            <h3 className='subject-title'>Web sémantique</h3>
+                                            <h4 className='subject-description'>En quoi le web sémantique permet de donner du sens aux données ?</h4>
+                                            <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/sfardel/'>FARDEL Simon</a>, <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/hyacintheknobloch/'>KNOBLOCH Hyacinthe</a></h5>
                                             {
                                                 <h5 className='subject-date'>26 janvier 2018, 8h30 - 9h30</h5>
                                         }

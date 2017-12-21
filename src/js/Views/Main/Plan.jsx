@@ -126,7 +126,7 @@ export default class Plan extends Component {
                                         </div>
                                     <div className='column'>
                                             <h3 className='subject-title'>Web sémantique</h3>
-                                            <h4 className='subject-description'>En quoi le web sémantique permet de donner du sens aux données ?</h4>
+                                            <h4 className='subject-description'>Le Web sémantique et l'Entreprise.</h4>
                                             <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/sfardel/'>FARDEL Simon</a>, <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/hyacintheknobloch/'>KNOBLOCH Hyacinthe</a></h5>
                                             {
                                                 <h5 className='subject-date'>26 janvier 2018, 8h30 - 9h45</h5>

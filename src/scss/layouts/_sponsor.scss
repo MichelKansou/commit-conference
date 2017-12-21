@@ -24,10 +24,11 @@
                 width: 150px;
                 height: 150px;
                 background-color: $white;
-                border-radius: 50%;
+                border-radius: 5%;
                 margin-right: 5em;
-                &:last-child {
-                    margin-right: 0;
+                &.transparent {
+                    background-color: transparent;
+
                 }
             }
         }
@@ -54,10 +55,7 @@
                     align-items: center;
                     img {
                         margin-right: 0;
-                        margin-bottom: 3em;
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        margin-bottom: 1em;
                     }
                 }
             }

@@ -728,6 +728,12 @@ footer .more-info {
   color: #F44336;
   margin: 1em auto;
 }
+/* line 25, ../../src/scss/modules/_card.scss */
+.card .address {
+  font-size: 20px;
+  color: #212121;
+  margin: 1em auto;
+}
 
 /* Header */
 /* line 3, ../../src/scss/modules/_navigation.scss */

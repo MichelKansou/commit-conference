@@ -47,7 +47,7 @@ export default class Home extends Component {
                         <h1 className='title'>Participez, Anticipez, Agissez</h1>
                         <h2 className='description'>Venez et découvrez les futures problématiques d’entreprise en 2020 </h2>
                         <h4 className='date'>25 - 26 Janvier, 2018 • Arras, France</h4>
-                        <h4 className='address'>Rue Briquet-Taillandier, 62223 Anzin-Saint-Aubin</h4>
+                        <h4 className='address'>Adresse: Restaurant L’Infini - Rue Briquet-Taillandier, 62223 Anzin-Saint-Aubin</h4>
                         <button className='btn' onClick={this.openModal}>Inscrivez vous !</button>
                     </div>
                     <Modal

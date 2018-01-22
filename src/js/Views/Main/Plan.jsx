@@ -69,7 +69,7 @@ export default class Plan extends Component {
                                             <img className='subject-logo' alt='Commit - Reactive System' src='./images/subjects logo/logo-reactive.png'/>
                                         </div>
                                         <div className='column'>
-                                            <h3 className='subject-title'>Reactive System</h3>
+                                            <h3 className='subject-title'>Reactive Systems</h3>
                                             <h4 className='subject-description'>Améliorez la disponibilité de votre application avec Spring et les systèmes réactifs</h4>
                                             <h5 className='subject-speaker'>Par : <a target="_blank" rel='noopener noreferrer' href='https://www.linkedin.com/in/florian-bellotti-80783bab/'>BELLOTTI Florian</a></h5>
                                             {
